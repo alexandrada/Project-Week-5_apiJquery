@@ -1,0 +1,387 @@
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+*, *.before, *:after {
+	box-sizing:border-box;
+}
+/* End of Setup Styles */
+/*font style*/
+
+@font-face {
+  font-family: 'crashLanding';
+  src: url('crashLanding/crashlandingbb-webfont.eot'); /* IE9 Compat Modes */
+  src: url('crashLanding/crashlandingbb-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('crashLanding/crashlandingbb-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('crashLanding/crashlandingbb-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('crashLanding/crashlandingbb-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('crashLanding/crashlandingbb-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+/*$neonGreen: #68fa00;
+$neonLime: #99FF00;
+$cyan: #3bfffc;
+$neonYellow: #d2ff1c;
+$purple: #6c58ce;
+$blue: #00c6f7;
+$coral: #fc7969;
+$lightPink: #fa73f5;
+$seafoam: #2dedc7;
+$gold: #ffd900;
+$magenta: #ff38d1;*/
+
+/*BODY STYLES*/
+body {
+    background: #00c6f7;
+  	background-image: url(images/riff_background.svg);
+
+
+}
+/*HEADER STYLES*/
+.flex{
+	webkit
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+  display: -webkit-inline-flex; /* Safari */
+  display: inline-flex;
+  -webkit-flex-wrap: wrap; /* Safari */
+  flex-wrap:         wrap;
+ -webkit-justify-content: center; /* Safari */
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content:         space-around;
+}
+
+html {
+	 font-size: 16px;
+}
+h1 {
+	 color: #fff;
+	 font-family: 'crashLanding';
+	 font-size: 10rem;
+	 letter-spacing: 20px;
+   text-align: center;
+   text-shadow: 1px 1px 1px #000;
+   margin: 7% 1% 4% ;
+}
+h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+	 color: #fff;
+   font-size: 3rem;
+	 line-height: 3.6rem;
+	 text-transform: uppercase;
+   text-align: center;
+   text-shadow: 1px 1px 1px #000;
+   margin: 1% 0 5%;
+}
+h3 {
+   color: #fff;
+   font-size:2rem;
+   height: 90px;
+   text-shadow: 1px 1px 1px #000;
+   text-transform: uppercase;
+   margin-top: 3%;
+   padding: 0 5%;
+}
+h4 {
+   text-align: center;
+   font-size:2.1rem;
+   text-transform: uppercase;
+}
+h5 {
+   text-align: center;
+   font-size:1rem;
+   text-transform: uppercase;
+   margin: 1%;
+}
+h6 {
+  font-size: 1rem;
+  margin-top:1%;
+}
+header {
+  width: 100%;
+  padding: 0 5%;
+}
+/*MEAL OPTION STYLES ex. breakfast, lunch etc*/
+
+.meal-wrapper-container /*holds the boxes*/{
+   width: 100%;
+   padding: 0 5%;
+   display: -webkit-flex;
+   display: -moz-flex;
+   display: -ms-flex;
+   display: -o-flex;
+   display: flex;
+   flex-wrap:wrap;
+   justify-content: space-around;
+}
+
+.box {
+   width: 25%;
+   margin: 2% 1% ;
+   text-align: center;
+   padding: 1% 0 2%;
+   box-shadow: 0 4px 8px 0 #000, 0 5px 10px rgba(0, 0, 0, .35);
+   display: -webkit-flex;
+   display: -moz-flex;
+   display: -ms-flex;
+   display: -o-flex;
+   display: flex;
+   flex-wrap:wrap;
+   cursor: pointer;
+}
+.box img {
+  margin: 0 auto; 
+  min-width:100%;
+  max-width: 100%;
+  min-height:100%;
+  max-height:100%;
+}
+#breakfast{ 
+  background: rgba(104,250,0,0.8);
+}
+#lunch {
+  background: rgba(59,255,252,0.8);
+}
+#snack {
+  background: rgba(252,121,105,0.8) ;
+}
+#entree {
+  background: rgba(255,217,0,0.8);
+}
+#dessert {
+  background: rgba(250,115,245,0.8)
+}
+#vegetarian {
+  background: rgba(45,237,199,0.8);
+}
+
+/*MEAL DISPLAY STYLES ex. recipeName and YouTube and button*/
+
+/*MODAL STYLES*/
+.modal {
+    display:none;
+    position: fixed;
+    overflow-y:scroll;
+    top: 0;
+    left:0;
+    opacity: 0;
+    width:100%;
+    min-height: 100%;
+    background: white;
+    margin: 0 auto;
+    z-index: 2;
+  
+
+}
+  
+/*MODAL-CONTAINER is both meal-container and youtube*/
+.modal-container {
+  height: 100%;
+  width: 100%;
+  /*overflow: hidden;*/
+  background: white;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap:wrap;
+  border: 1px solid #000;
+
+}
+
+/*LEFT SIDE ex. Recipe Name and Img*/
+.meal-container {
+  width: 50%;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap:wrap;
+  margin: 0 auto;
+}
+.meal-container img {
+  width: 100%;
+  height: 75%;
+
+}
+
+/*RIGHT SIDE ex. Youtube and Button*/
+.youtube {
+  width:50%;
+  height: 100vh;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap:wrap;
+   margin: 0 auto;
+}
+.buttons {
+  width: 100%;
+  height: 25%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  margin: 15%; 
+  background: #000;
+}
+button {
+  width: 100%;
+  height: 60px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color:#00c6f7;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 4px 0 #6208ff, 0 5px 10px rgba(0, 0, 0, .35);
+  z-index: 100;
+}
+h4 {
+  padding: 2% 5%;
+}
+button a {
+  text-decoration: none;
+  color: #000;
+}
+button#nextBtn {
+  margin:0;
+}
+button#recipeBtn {
+  margin-right:3%;
+
+}
+button h5:hover {
+color: #fff;
+cursor:pointer;
+}
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} 
+/*ADDED CLASS OF SHOW*/
+.show {
+    visibility: visible;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+    display: block;
+    padding: 5%;
+}
+/*FOOTER STYLES*/
+footer {
+	 text-align: center;
+   text-shadow: 1px 1px 1px #000;
+   color: #fff;
+   padding: 10% 0 2% 0;
+}
+
+/*RESPONSIVE STYLES*/
+@media (max-width: 980px){
+  .box {
+    width: 27%;
+   } 
+  }
+@media (max-width: 905px){
+  .box {
+    width: 30%;
+    margin: 2% 0;
+    }
+  .youtube {
+    width:80%;
+    }
+  .meal-container {
+      width: 80%;
+    }
+    .meal-container img{
+      margin: 0 10%;
+    }
+    h4 {
+      font-size: 2rem;
+      text-align: center;
+      padding: 0;
+    }
+  }
+@media (max-width: 830px){
+    h1 {
+      font-size: 8rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.7rem;
+    }
+  }
+@media (max-width: 745px){
+    .box {
+      width: 40%;
+    }
+    h1 {
+      font-size: 6rem;
+    }
+    h2 {
+      padding: 0 10%;
+      font-size: 1.5rem;
+    }
+  }
+@media (max-width: 525px){
+  .box {
+      width: 70%;
+    }
+    h1 {
+      font-size: 7rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h4 {
+      margin: 3% 0;
+    }
+  }
+@media (max-width: 460px){
+    h1 {
+        font-size: 6rem;
+  }
+    h2 {
+    font-size: 1.4rem;
+  }
+    h3 {
+        font-size: 1.5rem;
+      }
+    }
+@media (max-width: 415px) {
+    h1 {
+        font-size: 6rem;
+      }
+    h2 {
+        font-size: 1.7rem;
+        line-height: 2.6rem;
+      }
+    h4 {
+        height: 60px;
+      }
+    }
+
+
